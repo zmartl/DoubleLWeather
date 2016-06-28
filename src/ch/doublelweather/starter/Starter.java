@@ -3,7 +3,7 @@
  */
 package ch.doublelweather.starter;
 
-import ch.doublelweather.controller.DoubleLEWeatherController;
+import ch.doublelweather.controller.DoubleLWeatherController;
 import ch.doublelweather.gui.GUI;
 
 /**
@@ -19,13 +19,9 @@ public class Starter {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DoubleLEWeatherController controller = new DoubleLEWeatherController();
-		controller.handleUrl();
-		controller.printResult();
-		
-		GUI gui = new GUI();
-		gui.setVisible(true);
-		gui.setSize(700, 500);
+		DoubleLWeatherController controller = new DoubleLWeatherController();
+		controller.createGui();
+		//controller.printResult();
 	}
 
 }

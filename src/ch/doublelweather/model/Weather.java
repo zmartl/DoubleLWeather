@@ -3,23 +3,24 @@
  */
 package ch.doublelweather.model;
 
+import javax.swing.Icon;
+
 /**
- * @description
- * @author luca.marti
+ * @description The weather modal class from the program
+ * @author luca.marti, luca.zatti
  * @year 2016
  * @version 1.0
  */
 public class Weather {
-	private String icon;
+	private Icon icon;
 	private String weatherDescription;
 	private double minTemp;
 	private double maxTemp;
-	private double windSpeed;
 
 	/**
 	 * @return the icon
 	 */
-	public String getIcon() {
+	public Icon getIcon() {
 		return this.icon;
 	}
 
@@ -27,7 +28,7 @@ public class Weather {
 	 * @param icon
 	 *            the icon to set
 	 */
-	public void setIcon(String icon) {
+	public void setIcon(Icon icon) {
 		this.icon = icon;
 	}
 
@@ -74,20 +75,5 @@ public class Weather {
 	 */
 	public void setMaxTemp(double maxTemp) {
 		this.maxTemp = maxTemp;
-	}
-
-	/**
-	 * @return the windSpeed
-	 */
-	public double getWindSpeed() {
-		return this.windSpeed;
-	}
-
-	/**
-	 * @param windSpeed
-	 *            the windSpeed to set
-	 */
-	public void setWindSpeed(double windSpeed) {
-		this.windSpeed = windSpeed;
 	}
 }
