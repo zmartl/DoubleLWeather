@@ -10,5 +10,84 @@ package ch.doublelweather.model;
  * @version 1.0
  */
 public class Weather {
+	private String icon;
 	private String weatherDescription;
+	private double minTemp;
+	private double maxTemp;
+	private double windSpeed;
+
+	/**
+	 * @return the icon
+	 */
+	public String getIcon() {
+		return this.icon;
+	}
+
+	/**
+	 * @param icon
+	 *            the icon to set
+	 */
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	/**
+	 * @return the weatherDescription
+	 */
+	public String getWeatherDescription() {
+		return this.weatherDescription;
+	}
+
+	/**
+	 * @param weatherDescription
+	 *            the weatherDescription to set
+	 */
+	public void setWeatherDescription(String weatherDescription) {
+		this.weatherDescription = weatherDescription;
+	}
+
+	/**
+	 * @return the minTemp
+	 */
+	public double getMinTemp() {
+		return this.minTemp;
+	}
+
+	/**
+	 * @param minTemp
+	 *            the minTemp to set
+	 */
+	public void setMinTemp(double minTemp) {
+		this.minTemp = minTemp;
+	}
+
+	/**
+	 * @return the maxTemp
+	 */
+	public double getMaxTemp() {
+		return this.maxTemp;
+	}
+
+	/**
+	 * @param maxTemp
+	 *            the maxTemp to set
+	 */
+	public void setMaxTemp(double maxTemp) {
+		this.maxTemp = maxTemp;
+	}
+
+	/**
+	 * @return the windSpeed
+	 */
+	public double getWindSpeed() {
+		return this.windSpeed;
+	}
+
+	/**
+	 * @param windSpeed
+	 *            the windSpeed to set
+	 */
+	public void setWindSpeed(double windSpeed) {
+		this.windSpeed = windSpeed;
+	}
 }
