@@ -4,6 +4,7 @@
 package ch.doublelweather.starter;
 
 import ch.doublelweather.controller.DoubleLEWeatherController;
+import ch.doublelweather.gui.GUI;
 
 /**
  * @description
@@ -21,6 +22,10 @@ public class Starter {
 		DoubleLEWeatherController controller = new DoubleLEWeatherController();
 		controller.handleUrl();
 		controller.printResult();
+		
+		GUI gui = new GUI();
+		gui.setVisible(true);
+		gui.setSize(700, 500);
 	}
 
 }
