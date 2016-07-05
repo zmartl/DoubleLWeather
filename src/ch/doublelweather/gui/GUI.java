@@ -6,6 +6,7 @@ import java.awt.Cursor;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -223,7 +224,7 @@ public class GUI extends JFrame {
 		textField.setColumns(10);
 
 		btnSearch = new JButton("Search");
-		btnSearch.addActionListener(new SearchListener(this.textField));
+		btnSearch.addActionListener(new SearchListener(this.textField, this.day1_min, this.day1_max, this.day1_desc, this.day2_min, this.day2_max, this.day2_desc, this.day3_min, this.day3_max, this.day3_desc, this.day4_min, this.day4_max, this.day4_desc, this.day5_min, this.day5_max, this.day5_desc, this.pic_day1, this.pic_day2, this.pic_day3, this.pic_day4, this.pic_day5));
 		panel_chooser.add(btnSearch, BorderLayout.EAST);
 
 		min.add(day1_min);

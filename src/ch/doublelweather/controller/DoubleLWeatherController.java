@@ -28,7 +28,7 @@ import ch.doublelweather.model.Weather;
 public class DoubleLWeatherController {
 
 	private GUI gui;
-	private ArrayList<Weather> weatherList = new ArrayList<Weather>();
+	public ArrayList<Weather> weatherList = new ArrayList<Weather>();
 	private String city = "Zürich,Schweiz";
 	private String url = "http://api.openweathermap.org/data/2.5/forecast/daily?&mode=json&units=metric&lang=en&cnt=7&cnt=3&appid=502fdfcd2e5228445432c9535089bb2b&q="
 			+ city;
@@ -52,10 +52,11 @@ public class DoubleLWeatherController {
 				weather.setMinTemp(tempObject.getDouble("min"));
 				weather.setMaxTemp(tempObject.getDouble("max"));
 				weather.setWeatherDescription(weatherDetailObject.getString("description"));
+				getIconString(weatherDetailObject.getString("main"), weather);
 				// weather.setIcon(getIconString(weatherDetailObject.getString("main")));
 
 				weatherList.add(weather);
-				this.setValueInGui();
+				
 			}
 
 		} catch (Exception e) {
@@ -68,25 +69,29 @@ public class DoubleLWeatherController {
 		gui.setVisible(true);
 		gui.setSize(700, 500);
 		this.handleUrl();
+		this.setValueInGui();
 	}
 
-	private String getIconString(String input) {
+	private void getIconString(String input, Weather weather) {
 		String icon;
 		switch (input) {
 		case "Rain":
-			icon = "images/rain.png";
+			icon = "C:/Users/luca.marti/workspace/DoubleLWeather/images/rain.png";
+			weather.setIcon(icon);
 			break;
 		case "Clear":
-			icon = "images/sun.png";
+			icon = "C:/Users/luca.marti/workspace/DoubleLWeather/images/sun.png";
+			weather.setIcon(icon);
 			break;
 		case "Cloud":
-			icon = "images/cloud.png";
+			icon = "C:/Users/luca.marti/workspace/DoubleLWeather/images/cloud.png";
+			weather.setIcon(icon);
 			break;
 		default:
-			icon = "images/error.png";
+			icon = "C:/Users/luca.marti/workspace/DoubleLWeather/images/error.png";
+			weather.setIcon(icon);
 			break;
 		}
-		return icon;
 	}
 
 	private void setValueInGui() {

@@ -3,6 +3,8 @@
  */
 package ch.doublelweather.model;
 
+import java.util.Observable;
+
 import javax.swing.Icon;
 
 /**
@@ -11,8 +13,8 @@ import javax.swing.Icon;
  * @year 2016
  * @version 1.0
  */
-public class Weather {
-	private Icon icon;
+public class Weather{
+	private String icon;
 	private String weatherDescription;
 	private double minTemp;
 	private double maxTemp;
@@ -20,7 +22,7 @@ public class Weather {
 	/**
 	 * @return the icon
 	 */
-	public Icon getIcon() {
+	public String getIcon() {
 		return this.icon;
 	}
 
@@ -28,7 +30,7 @@ public class Weather {
 	 * @param icon
 	 *            the icon to set
 	 */
-	public void setIcon(Icon icon) {
+	public void setIcon(String icon) {
 		this.icon = icon;
 	}
 
